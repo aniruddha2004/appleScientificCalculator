@@ -106,7 +106,12 @@ function evaluate(equation) {
     equation = equation.replaceAll("π", "Math.PI");
     equation = equation.replaceAll("Rand", "Math.random()");
     equation = equation.replace(/(\d+)!/g, (match, number) => factorial(Number(number)));
-    return eval(equation);
+    try{
+        return eval(equation);
+    }
+    catch(e){
+        return "Error";
+    }
 }
 
 function factorial(n) {

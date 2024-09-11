@@ -82,7 +82,7 @@ button {
 }
 @media (max-width: 1180px) {
     .laptop {
-        display: none;
+        display: none !important;
     }
 
     .row button {
